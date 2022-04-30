@@ -1,0 +1,9 @@
+#print last 4 frequently access urls count in sorted order
+
+a) cat access.log
+
+b) cat access.log | awk '{print $11}'
+
+c) cat access.log | awk '{print $11}' | sort -n | uniq
+
+d) cat access.log | awk '{print $11}' | sort -n | uniq | head -4

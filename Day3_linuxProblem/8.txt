@@ -1,0 +1,9 @@
+#print list of 10 unique sorted client IP from /var/log/httepd/access.log
+
+a) cat access.log
+
+b) cat access.log | awk '{print $1}'
+
+c) cat access.log | awk '{print $1}' | sort | wc -l
+
+d) cat access.log | awk '{print $1}' | sort | uniq | head -4

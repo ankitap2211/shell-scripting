@@ -1,0 +1,16 @@
+# Move files from one folder to respective folders
+
+for file in `ls *.txt`; 
+do 
+ folderName=`echo $file |awk -F. '{print $1}'`;
+ if [ -d $folderName ];
+ then
+ echo Removing folder $folderName as it already exists
+ rm -R $folderName;
+ fi 
+ mkdir $folderName;
+ echo Moving $file to $folderName 
+ mv $file $folderName; 
+ echo moved $file to $folderName;
+
+done

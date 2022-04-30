@@ -1,0 +1,25 @@
+# Data analysis / manipulation (Awk)
+
+1)
+
+awk '{print $2,$4}END{$7 >10000}' data.csv
+
+3)
+
+awk '{print $2,$7}' data.csv
+
+4)
+
+cat data.csv | grep -i captain | awk '{sum+=$7}END{print sum/NR}'
+
+5)
+
+cat data.csv | grep -i captain
+
+6)
+
+awk '($5 >=7000 && $5 <= 10000){print $3,$5}' data.csv
+
+7)
+
+awk '{sum+=$4}END{print sum/NR}' data.csv

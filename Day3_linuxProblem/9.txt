@@ -1,0 +1,12 @@
+# Check if a folder exists or not. If it's not present,create it
+
+
+read -p "Enter the name of folder you want to make " folderName
+if [ -d $folderName ]
+then
+     echo "Folder already exists"
+else
+     mkdir $folderName
+     echo "Making directory $folderName"
+
+fi
